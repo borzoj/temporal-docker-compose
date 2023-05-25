@@ -382,14 +382,14 @@ dynamicConfigClient:
     pollInterval: "60s"
 
 #OpenTelemetry
-otel:
-  exporters:
-    - kind:
-        signal: "traces"
-        model: "otlp"
-        protocol: "grpc"
-      spec:
-        connection:
-          endpoint: "api.honeycomb.io:443"
-        headers:
-          x-honeycomb-team: "key-here"
+# otel:
+#   exporters:
+#     - kind:
+#         signal: "traces"
+#         model: "otlp"
+#         protocol: "grpc"
+#       spec:
+#         connection:
+#           endpoint: "api.honeycomb.io:443"
+#         headers:
+#           x-honeycomb-team: "key-here"
