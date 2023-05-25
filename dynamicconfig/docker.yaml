@@ -1,0 +1,11 @@
+otel:
+  exporters:
+    - kind:
+        signal: traces
+        model: otlp
+        protocol: grpc
+      spec:
+        connection:
+          endpoint: api.honeycomb.io:443
+        headers:
+          x-honeycomb-team: ya433AdnpGqnb5SzFENCeA
