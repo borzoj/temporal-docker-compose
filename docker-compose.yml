@@ -108,6 +108,11 @@ services:
         target: /etc/grafana/provisioning/datasources
     depends_on:
       - prometheus
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin:2.24.2
+    ports:
+      - 9411:9411
 
 networks:
   temporal-network:
