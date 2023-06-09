@@ -28,13 +28,23 @@ docker-compose up
 - Temporal Server: [http://localhost:8080](http://localhost:8080)
 - Prometheus [http://localhost:9090](http://localhost:9090)
 - Grafana [http://localhost:8085](http://localhost:8085)
+- Zipkin [http://localhost:9411](http://localhost:9411)
 
-## Server and worker monitoring
+## Server and Worker Metrics
 
-Prometheus is configured to scrape server and worker metrics. This project only provides the server. It's meant to be used in conjunction with a worker provided in [https://github.com/borzoj/temporal-hello-world](https://github.com/borzoj/temporal-hello-world)
+Prometheus is configured to scrape server and worker metrics. This project only provides the server. It's meant to be used in conjunction with a worker provided in [Temporal Hello World](https://github.com/borzoj/temporal-hello-world)
 
 ## Grafana Dashboard
 
-A Grafana dashboard with basic Temporal workflow metrics is provided in `grafana/dashboards/temporal.json`. You can [import it directly into Grafana](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#export-and-import-dashboards). This dashboard uses worker metrics.
+A Grafana dashboard with basic Temporal workflow metrics is provided in `grafana/dashboards/temporal.json`. You can [import it directly into Grafana](https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#export-and-import-dashboards). This dashboard uses worker metrics only.
+
+## Zipkin
+
+Zipkin allows searching and viewing OpenTelemetry tracing data. [Temporal Hello World](https://github.com/borzoj/temporal-hello-world) is set up to push tracing data to Zipkin.
+
+## Tracing Data with OpenTelemetry
+
+Temporal Server can emit OpenTelemetry tracing data. The configuration for this is included in the server configuration template but it is commented out at the moment. Tracing from the server is not very useful.
+
 
 
